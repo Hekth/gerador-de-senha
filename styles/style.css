@@ -1,0 +1,202 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+/* VAIÁVEIS */
+:root {
+    --preto: #161A30;
+    --azul-marinho-escuro: #31304D;
+    --cinza: #B6BBC4;
+    --branco: #F0ECE5;
+    --fonte: 'Inconsolata', sans-serif;
+}
+
+* {
+    font-family: var(--fonte);
+    color: var(--branco);
+}
+
+body {
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cabecalho {
+    width: 100%;
+    text-align: center;
+}
+
+.cabecalho img {
+    max-width: 600px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    min-width: 250px;
+    max-width: 500px;
+}
+
+.principal__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.principal__container-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.qtd-caracteres__valor {
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.container-configuracao {
+    position: relative;
+    width: 42px;
+    height: 42px;
+}
+
+.principal__container img {
+    background-color: var(--branco);
+    padding: 0.3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 800ms;
+    
+}
+
+.principal__config {
+    width: 220px;
+    position: absolute;
+    top: 96%;
+    background-color: var(--branco);
+    padding: 1rem;
+    display: none;
+    z-index: 10;
+    box-shadow: 5px 5px 1px rgb(107, 107, 107);
+}
+
+.principal__config__opcao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.principal__config__opcao * {
+    cursor: pointer;
+}
+
+.config-label {
+    color: var(--azul-marinho-escuro);
+}
+
+.principal__container img:hover {
+    transform: rotate(360deg);
+}
+
+.principal__container img:hover ~ div,.principal__container img:hover, .principal__config:hover, .container-configuracao:hover {
+    display: block;
+}
+
+.gerar-senha-btn {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--azul-marinho-escuro);
+    padding: 0.8rem;
+    border: 2px solid var(--cinza);
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: 200ms;
+}
+
+.gerar-senha-btn:hover {
+    background-color: var(--preto);
+}
+
+.senha-container {
+    display: none;
+}
+
+.senha-container span {
+    display: block;
+}
+
+.senha-container__senha {
+    background-color: var(--cinza);
+    color: var(--preto);
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    margin: 1rem 0;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.senha-container__senha:hover {
+    background-color: var(--branco);
+    transform: scale(1.02);
+}
+
+.senha-container__msg {
+    opacity: 0;
+    transition: 500ms;
+}
+
+.senha-container__senha:hover ~ .senha-container__msg {
+    opacity: 1;
+}
+
+.senha-container__msg {
+    text-align: center;
+}
+
+footer {
+    width: 80%;
+    border-top: 1px solid var(--branco);
+    font-family: var(--fonte);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-decoration: none;
+}
+
+footer a:hover span{
+    color: var(--cinza);
+}
+
+@media screen and (max-width: 728px) {
+    .principal__config {
+        right: 0;
+    }
+}
+@media screen and (max-width: 1442px) {
+    .senha-container__senha {
+        overflow-x: scroll;
+    }
+}

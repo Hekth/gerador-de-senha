@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="script.js" defer></script>
+    <title>Gerador de Senhas Aleatório</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="imagens/logo.png" alt="logo gerador de senhas">
+    </header>
+    <main class="principal">
+        <div class="principal__container">
+            <div class="principal__container-campo">
+                <label for="qtd-caracteres">Quantidade de caracteres: <span class="qtd-caracteres__valor">25</span></label>
+                <input type="range" min="10" max="50" value="25" class="qtd-caracteres" id="qtd-caracteres">
+            </div>
+            <div class="container-configuracao">
+                <img src="imagens/engrenagem.png" alt="ícone de uma engrenagem">
+                <div class="principal__config">
+                    <div class="principal__config__opcao">
+                        <label for="numeros" class="config-label">Números: </label>
+                        <input type="checkbox" checked id="numeros">
+                    </div>
+                    <div class="principal__config__opcao">
+                        <label for="caracteres-especiais" class="config-label">Caracteres Especiais: </label>
+                        <input type="checkbox" checked id="caracteres-especiais">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="gerar-senha-btn">Gerar senha</button>
+        <div class="senha-container">
+            <span>
+                Sua senha gerada foi:
+            </span>
+            <span class="senha-container__senha"></span>
+            <span class="senha-container__msg">
+                Clique na senha acima para copiá-la!&#x261D;
+            </span>
+        </div>
+    </main>
+    <footer>
+        <h3>Feito por Heitor da Costa</h3>
+        
+        <a href="https://github.com/Hekth" target="_blank" rel="external">
+            <img src="imagens/github.png" alt="icone do github">
+            <span>Github</span>
+        </a>
+        <a href="https://www.linkedin.com/in/heitor-candido/" target="_blank" rel="external">
+            <img src="imagens/linkedin.png" alt="ícone do linkedin">
+            <span>Linkedin</span>
+        </a>
+    </footer>
+</body>
+</html>
