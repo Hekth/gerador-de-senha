@@ -17,8 +17,10 @@
                 <label for="qtd-caracteres">Quantidade de caracteres: <span class="qtd-caracteres__valor">25</span></label>
                 <input type="range" min="10" max="50" value="25" class="qtd-caracteres" id="qtd-caracteres">
             </div>
-            <div class="container-configuracao">
+            <button class="btn-config">
                 <img src="imagens/engrenagem.png" alt="ícone de uma engrenagem">
+            </button>
+            <!-- <div class="container-configuracao">
                 <div class="principal__config">
                     <div class="principal__config__opcao">
                         <label for="numeros" class="config-label">Números: </label>
@@ -28,8 +30,8 @@
                         <label for="caracteres-especiais" class="config-label">Caracteres Especiais: </label>
                         <input type="checkbox" checked id="caracteres-especiais">
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div> -->
         </div>
         <button type="button" class="gerar-senha-btn">Gerar senha</button>
         <div class="senha-container">
@@ -54,5 +56,38 @@
             <span>Linkedin</span>
         </a>
     </footer>
+    <dialog class="configuracoes">
+        <form class="configuracoes__container">
+            <div class="container__palavra-especifica">
+                <label for="palavra-especifica">Informe uma palavra ou caractere que precisa conter na senha: </label>
+                <input type="text" placeholder="Digite uma palavra ou caractere" id="palavra-especifica" name="palavra" maxlength="24" minlength="0">
+                <small class="caracteres-restantes">24</small>
+            </div>
+
+            <h2>O que a senha deve conter?(Marque pelo menos <b>UMA</b> alternativa)</h2>
+            <div class="container__checkbox">
+                <label for="numeros">Números:</label>
+                <input type="checkbox" id="numeros" checked name="numeros">
+            </div>
+
+            <div class="container__checkbox">
+                <label for="letras">Letras:</label>
+                <input type="checkbox" id="letras" checked name="letras">
+            </div>
+
+            <div class="container__checkbox">
+                <label for="especiais">Caracteres Especiais</label>
+                <input type="checkbox" id="especiais" checked name="especiais">
+            </div>
+            <div>
+                <button type="button" class="configuracoes__btn-config">
+                    Ok
+                </button>
+                <button type="reset" class="configuracoes__btn-config">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </dialog>
 </body>
 </html>
