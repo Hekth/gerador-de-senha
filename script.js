@@ -61,16 +61,12 @@ configBtns[1].addEventListener('click', () => {
 
 /* mostrando o valor do input range na tela */
 inputRange.addEventListener('change', () => {
-    estado = {
-        palavra: '',
-        numeros: true,
-        letras: true,
-        especiais: true
-    };
-
-    configCampos.forEach((campo) => {
-        campo.hasAttribute('checked') ? campo.checked = true : campo.value = '';
-    });
+    estado.palavra = '';
+    console.log(estado);
+    palavraEspecifica.value = '';
+    // configCampos.forEach((campo) => {
+    //     campo.hasAttribute('checked') ? campo.checked = true : campo.value = '';
+    // });
 });
 
 inputRange.addEventListener('input', ({ target }) => {
