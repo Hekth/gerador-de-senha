@@ -43,6 +43,7 @@
   </li>
 </ul>
 
+<span> O projeto também conta com responsividade para telas menores!</span>
 <a href="https://geradordesenha-hekth.vercel.app"> LINK PARA ACESSAR O PROJETO </a>
 
 <span> Obrigado! </span>
